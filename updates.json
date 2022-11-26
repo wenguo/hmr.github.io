@@ -5,7 +5,8 @@
       "latest-version": "1.0",
       "download-url": "http://www.duo314.com/update.tar",
       "changelog": "This is an example changelog for Linux. Go on...",
-      "mandatory": true
+      "mandatory-update": true,
+      "md5": 9x9a9dsaf
     }
   }
 }
