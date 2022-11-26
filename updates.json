@@ -1,0 +1,11 @@
+{
+  "updates": {
+    "linux": {
+      "open-url": "",
+      "latest-version": "1.0",
+      "download-url": "http://www.duo314.com/update.tar",
+      "changelog": "This is an example changelog for Linux. Go on...",
+      "mandatory": true
+    }
+  }
+}
