@@ -3,7 +3,7 @@
     "linux": {
       "open-url": "",
       "latest-version":"091bd40.qt5.15.20221216",
-      "download-url": "https://wenguo.github.io/update.tar",
+      "download-url": "https://wenguo.github.io/x86_64/update.tar",
       "changelog": "测试",
       "mandatory-update": true,
       "md5":"b47c8d064afa6e8b5eb5b4ea89dab019"
