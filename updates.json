@@ -2,11 +2,11 @@
   "updates": {
     "linux": {
       "open-url": "",
-      "latest-version":"e59cc61.qt5.15.20221217",
-      "download-url":"https://wenguo.github.io/x86_64/update.tar",
+      "latest-version":"944cf56.qt5.15.20221217",
+      "download-url":"https://wenguo.github.io/arm64/update.tar",
       "changelog": "测试",
       "mandatory-update": true,
-      "md5":"6c26ba015287ace0b0997a126873837d"
+      "md5":"f7d6c5a4c6979cb3d6f75f2feb8680c1"
     }
   }
 }

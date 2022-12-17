@@ -18,7 +18,6 @@ UPDATEDIR = $$PWD/../hmr-update
 URL=https:\/\/wenguo.github.io
 exists($$UPDATEDIR){
     PRE_TARGETDEPS +=  $$UPDATEDIR/updates.json
-    checkingDIR.commands = $$quote(mkdir -p $$UPDATEDIR/$${QT_ARCH})
 
     packingTAR.target = $$UPDATEDIR/$${QT_ARCH}/update.tar
     packingTAR.commands = $$quote(tar cvf $$packingTAR.target -C$$DESTDIR hmr-loader hmr-ui hmr-splash libhmr-lib.so)
@@ -30,6 +29,7 @@ exists($$UPDATEDIR){
                                            $$UPDATEDIR/updates.json)
     updatingJSON.depends = checkingDIR packingTAR
 
+    checkingDIR.commands = $$quote(rm $$packingTAR.target & mkdir -p $$UPDATEDIR/$${QT_ARCH})
 
 
     QMAKE_EXTRA_TARGETS += packingTAR checkingDIR updatingJSON
