@@ -114,6 +114,7 @@ typedef struct {
 const process tools[] = {
     {"hmr-loader", ""},
     {"hmr-ui", ""},
+    {"hmr-splash", ""},
 };
 
 const std::string lockFiles[] = {

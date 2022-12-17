@@ -3,10 +3,10 @@
     "linux": {
       "open-url": "",
       "latest-version":"e59cc6d.qt5.15.20221217",
-      "download-url":"https://wenguo.github.io/arm64/update.tar",
+      "download-url":"https://wenguo.github.io/x86_64/update.tar",
       "changelog": "测试",
       "mandatory-update": true,
-      "md5":"6c108a187f95346aee7ac26dbf2bfc7d"
+      "md5":"9c206abcf4c0d0d9230fbc2024487980"
     }
   }
 }
