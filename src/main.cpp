@@ -15,7 +15,6 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include <signal.h>
-#include "utils.h"
 #include <sys/wait.h>
 #include <iostream>
 #include <string.h>
