@@ -24,7 +24,7 @@ exists($$UPDATEDIR){
 
     updatingJSON.target =    $$UPDATEDIR/updates.json
     updatingJSON.commands = $$quote(sed -i -E -e \'s/\"latest-version\":\s?\".+?\"/\"latest-version\":\"$${VERSION}\"/g\' \
-                                           -e \'s/\"md5\":\s?\".+?\"/\"md5\":\"$$system(md5sum  $$packingTAR.target | cut -c -32)\"/g\' \
+                                           -e \'s/\"md5\":\s?\".+?\"/\"md5\":\"$$system(md5sum  $$packingTAR.target|cut -c -32)\"/g\' \
                                            -e \'s/\"download-url\":\s?\".+?\"/\"download-url\":\"$${URL}\/$${QT_ARCH}\/update.tar\"/g\' \
                                            $$UPDATEDIR/updates.json)
     updatingJSON.depends = checkingDIR packingTAR
