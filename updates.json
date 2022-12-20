@@ -2,7 +2,7 @@
   "updates": {
     "linux": {
       "open-url": "",
-      "latest-version":"V1.0-2-g1ce1698-20221220",
+      "latest-version":"V1.0-4-g1ce1698-20221220",
       "download-url":"https://wenguo.github.io/x86_64/update-V1.0-3-g1ce1698-20221220.tar",
       "changelog": "测试",
       "mandatory-update": true,
