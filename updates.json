@@ -2,11 +2,12 @@
   "updates": {
     "linux": {
       "open-url": "",
-      "latest-version":"V1.0-1-g78f74a4-20221219",
-      "download-url":"https://wenguo.github.io/x86_64/update.tar",
+      "latest-version":"V1.0",
+      "download-url":"https://wenguo.github.io/x86_64/update-V1.0.tar",
       "changelog": "测试",
       "mandatory-update": true,
-      "md5":"503f9534e61bd9bd2cb710de74fe2e05"
+      "file-size":"5672960",
+      "md5":"cc36303dc42610e21513d9658b03c663"
     }
   }
 }
