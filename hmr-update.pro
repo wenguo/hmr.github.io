@@ -36,6 +36,7 @@ exists($$UPDATEDIR){
 #    QMAKE_EXTRA_TARGETS += packingTAR checkingDIR updatingJSON
      packingTAR.target = $$UPDATEDIR/$${QT_ARCH}/update-$${GIT_VERSION}.tar
      packingTAR.commands = $$quote($$PWD/packing.sh $$UPDATEDIR $${QT_ARCH} $${GIT_VERSION} $$DESTDIR)
+     packingTAR.CONFIG = phony
      PRE_TARGETDEPS += $$UPDATEDIR/$${QT_ARCH}/update-$${GIT_VERSION}.tar
      QMAKE_EXTRA_TARGETS += packingTAR
 }
