@@ -55,7 +55,7 @@ std::vector<std::string> splitpath(const std::string &str, const std::set<char> 
     return result;
 }
 
-std::vector<pid_t> proc_find(const char *name)
+std::vector<pid_t> proc_find2(const char *name)
 {
     DIR *dir;
     struct dirent *ent;
@@ -106,6 +106,67 @@ std::vector<pid_t> proc_find(const char *name)
     return result;
 }
 
+std::vector<pid_t> proc_find(const char *name)
+{
+    std::vector<pid_t> result;
+    char str[256] = {0};
+    sprintf(str, "pgrep %s", name);
+    FILE *fp = popen(str, "r");
+
+    if (fp) {
+        char line[256];
+
+        while (fgets(line, sizeof(line) - 1, fp) != NULL) {
+            pid_t pid = atoi(line);
+            memset(line, 0, sizeof(line));
+            result.push_back(pid);
+        }
+
+        /* close */
+        pclose(fp);
+    }
+
+    return result;
+}
+
+void setEnvironment(std::string env, std::string var)
+{
+    char *oldLDPath = getenv(env.c_str());
+    std::string ldPath = std::string(oldLDPath ? oldLDPath : "");
+    ldPath += var;
+    setenv(env.c_str(), ldPath.c_str(), 1);
+}
+
+std::string getExePath()
+{
+    char buffer[PATH_MAX];
+    char *resolved = nullptr;
+    int length = -1;
+    int dirname_length = 0;
+
+    for (;;) {
+        resolved = realpath("/proc/self/exe", buffer);
+
+        if (!resolved)
+            break;
+
+        length = (int)strlen(resolved);
+
+        for (int i = length - 1; i >= 0; --i) {
+            if (buffer[i] == '/') {
+                dirname_length = i;
+                break;
+            }
+        }
+
+        break;
+    }
+
+    buffer[dirname_length] = '\0';
+    return std::string(buffer);
+}
+
+
 typedef struct {
     std::string name;
     std::string fullPath;
@@ -126,9 +187,12 @@ int main(int argc, char *argv[])
 {
     (void)(argc);
     (void)(argv);
+    std::string exePath = getExePath();
+    setEnvironment("LD_LIBRARY_PATH", ":" + exePath + ":" + exePath + "/lib");
 
     //tried to kill then in gental way
     for (auto tool : tools) {
+        printf("tried to kill process %s in gental way\n", tool.name.c_str());
         //check if the process is already running
         std::vector<pid_t> pids = proc_find(tool.name.c_str());
 
@@ -144,6 +208,8 @@ int main(int argc, char *argv[])
 
     //tried to kill them again in brutal way
     for (auto tool : tools) {
+        printf("tried to kill process %s again in brutal way\n", tool.name.c_str());
+
         //check if the process is already running
         std::vector<pid_t> pids = proc_find(tool.name.c_str());
 

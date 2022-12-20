@@ -6,7 +6,7 @@ PACKING_TARGET=${UPDATEDIR}/${QT_ARCH}/update-${GIT_VERSION}.tar
 JSON_TARGET=$UPDATEDIR/updates.json
 URL="https://wenguo.github.io"
 mkdir -p $UPDATEDIR/$QT_ARCH
-tar cvf ${PACKING_TARGET} -C${DESTDIR} hmr-loader hmr-ui hmr-splash libhmr-lib.so
+tar cvf ${PACKING_TARGET} -C${DESTDIR} hmr-loader hmr-ui hmr-splash hmr-killer libhmr-lib.so
 MD5=`md5sum $PACKING_TARGET|cut -c -32`
 FILE_SIZE=`stat -c %s $PACKING_TARGET`
 sed -i -E -e "s/\"latest-version\":\s?\".+?\"/\"latest-version\":\"${GIT_VERSION}\"/g" $JSON_TARGET
