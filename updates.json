@@ -2,12 +2,12 @@
   "updates": {
     "linux": {
       "open-url": "",
-      "latest-version":"V1.0-5-g36a8714-20221221",
-      "download-url":"https://wenguo.github.io/arm64/update-V1.0-5-g36a8714-20221221.tar",
+      "latest-version":"V1.0-57-gda7cb41-20230314",
+      "download-url":"http://121.4.142.200:8080/arm64/update-V1.0-57-gda7cb41-20230314.tar",
       "changelog": "测试",
       "mandatory-update": true,
-      "file-size":"5867520",
-      "md5":"89b516801802d71ff1d7d936cbd9b276"
+      "file-size":"7270400",
+      "md5":"5708bb6c1927793e1e28579278f31471"
     }
   }
 }

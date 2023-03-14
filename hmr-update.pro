@@ -40,3 +40,6 @@ exists($$UPDATEDIR){
      PRE_TARGETDEPS += $$UPDATEDIR/$${QT_ARCH}/update-$${GIT_VERSION}.tar
      QMAKE_EXTRA_TARGETS += packingTAR
 }
+
+DISTFILES += \
+    packing.sh
