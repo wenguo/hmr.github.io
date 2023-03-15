@@ -7,7 +7,8 @@ PACKING_TARGET=${UPDATEDIR}/${QT_ARCH}/update-${GIT_VERSION}.tar
 JSON_TARGET=$UPDATEDIR/updates.json
 URL="http://121.4.142.200:8080/"
 mkdir -p $UPDATEDIR/$QT_ARCH
-tar cvf ${PACKING_TARGET} -C${DESTDIR} hmr-loader hmr-ui hmr-splash libhmr-lib.so config audio data HMRDb.sqlite3
+tar cvf ${PACKING_TARGET} -C${DESTDIR} hmr-loader hmr-ui hmr-splash libhmr-lib.so
+#tar cvf ${PACKING_TARGET} -C${DESTDIR} hmr-loader hmr-ui hmr-splash libhmr-lib.so config audio data HMRDb.sqlite3
 echo "tar cvf ${PACKING_TARGET} -C${DESTDIR}"
 MD5=`md5sum $PACKING_TARGET|cut -c -32`
 FILE_SIZE=`stat -c %s $PACKING_TARGET`
