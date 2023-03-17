@@ -17,8 +17,6 @@ sed -i -E -e "s/\"md5\":\s?\".+?\"/\"md5\":\"${MD5}\"/g" $JSON_TARGET
 sed -i -E -e "s/\"download-url\":\s?\".+?\"/\"download-url\":\"http:\/\/121.4.142.200:8080\/${QT_ARCH}\/update-${GIT_VERSION}.tar\"/g" $JSON_TARGET
 sed -i -E -e "s/\"file-size\":\s?\".+?\"/\"file-size\":\"$FILE_SIZE\"/g" $JSON_TARGET
 
-echo $JSON_TARGET
-
 scp $JSON_TARGET wliu@121.4.142.200:/var/www/html/
 scp $PACKING_TARGET wliu@121.4.142.200:/var/www/html/$QT_ARCH
 

@@ -2,12 +2,12 @@
   "updates": {
     "linux": {
       "open-url": "",
-      "latest-version":"V1.0-57-gda7cb41-20230314",
-      "download-url":"http://121.4.142.200:8080/arm64/update-V1.0-57-gda7cb41-20230314.tar",
+      "latest-version":"V1.0-58-g311bd2e-20230317",
+      "download-url":"http://121.4.142.200:8080/arm64/update-V1.0-58-g311bd2e-20230317.tar",
       "changelog": "测试",
       "mandatory-update": true,
-      "file-size":"7270400",
-      "md5":"5708bb6c1927793e1e28579278f31471"
+      "file-size":"6103040",
+      "md5":"d3b026a3002ce5889e5296672f65bf7c"
     }
   }
 }
