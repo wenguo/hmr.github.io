@@ -2,12 +2,12 @@
   "updates": {
     "linux": {
       "open-url": "",
-      "latest-version":"V1.0-58-g311bd2e-20230317",
-      "download-url":"http://121.4.142.200:8080/arm64/update-V1.0-58-g311bd2e-20230317.tar",
+      "latest-version":"V1.0.98",
+      "download-url":"http://121.4.142.200:8080/arm64/update-V1.0.98.tar",
       "changelog": "测试",
       "mandatory-update": true,
-      "file-size":"6103040",
-      "md5":"d3b026a3002ce5889e5296672f65bf7c"
+      "file-size":"14059520",
+      "md5":"d457be2cdaa2b38d9b6284f9ed89e7ca"
     }
   }
 }

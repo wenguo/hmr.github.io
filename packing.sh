@@ -14,6 +14,7 @@ then
     cp -rdv ~/workspace/HMR/QSimpleUpdater/build5.15/libQSimpleUpdater.so* ${DESTDIR}/lib
 else
     cp -rdv ~/workspace/HMR/QSimpleUpdater/build-px30-5.15.2/libQSimpleUpdater.so* ${DESTDIR}/lib
+    cp -rdv ~/workspace/HMR/libnymea-networkmanager/build-px30-5.15/libnymea-networkmanager/libnymea-networkmanager.so* ${DESTDIR}/lib
 fi
 
 tar cvf ${PACKING_TARGET}  -C${DESTDIR} hmr-loader hmr-ui hmr-splash libhmr-lib.so lib/
